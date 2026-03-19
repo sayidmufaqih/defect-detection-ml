@@ -1,13 +1,13 @@
 # Semiconductor Defect Detection using XGBoost and LSTM
 
-## 📌 Overview
+## Overview
 This project focuses on predicting defective outcomes in semiconductor manufacturing using the SECOM dataset. The objective is to detect rare failure events from high-dimensional sensor data.
 
 A major challenge in this task is the **severe class imbalance**, where defective samples represent only a small portion of the dataset. This project compares traditional machine learning and deep learning approaches to understand their effectiveness under such conditions.
 
 ---
 
-## 🎯 Objectives
+## Objectives
 - Build a robust baseline model using XGBoost  
 - Handle class imbalance effectively  
 - Apply threshold tuning for better defect detection  
@@ -16,7 +16,7 @@ A major challenge in this task is the **severe class imbalance**, where defectiv
 
 ---
 
-## 📊 Dataset
+## Dataset
 - Source: SECOM dataset  
 - Samples: ~1500  
 - Features: 590 sensor measurements  
@@ -24,7 +24,7 @@ A major challenge in this task is the **severe class imbalance**, where defectiv
   - `0` → Normal (Pass)  
   - `1` → Defect (Fail)  
 
-### ⚠️ Challenges
+### Challenges
 - High-dimensional feature space (590 features)  
 - Many noisy and irrelevant features  
 - Severe class imbalance  
@@ -33,7 +33,7 @@ A major challenge in this task is the **severe class imbalance**, where defectiv
 
 ---
 
-## ⚙️ Data Preprocessing
+## Data Preprocessing
 - Missing values handled using forward-fill and backward-fill  
 - Feature scaling applied using MinMaxScaler  
 - Feature selection applied (top important features from XGBoost)  
@@ -44,7 +44,7 @@ A major challenge in this task is the **severe class imbalance**, where defectiv
 
 ---
 
-## 🤖 Model 1: XGBoost (Baseline)
+## Model 1: XGBoost (Baseline)
 
 ### Approach
 - Tree-based model optimized for tabular data  
@@ -52,27 +52,27 @@ A major challenge in this task is the **severe class imbalance**, where defectiv
 - Probability-based predictions  
 - Threshold tuning applied to optimize F1-score  
 
-### 📈 Results
+### Results
 - Accuracy: ~0.93  
 - F1-score: **0.28**  
 
-### 💡 Key Insight
+### Key Insight
 Lowering the classification threshold significantly improves the detection of rare defect events.
 
 ---
 
-## 🔄 Model 2: LSTM (Time-Series Approach)
+## Model 2: LSTM (Time-Series Approach)
 
 ### Approach
 - Data transformed into sequences using sliding window  
 - LSTM used to capture temporal dependencies  
 - Threshold tuning applied  
 
-### 📈 Results
+### Results
 - Accuracy: ~0.05  
 - F1-score: ~0.10  
 
-### ⚠️ Observations
+### Observations
 The LSTM model collapsed into predicting all samples as defective:
 Confusion Matrix:
 [[ 0 293]
@@ -83,7 +83,7 @@ Confusion Matrix:
 - However, all normal samples were misclassified  
 - Resulted in extremely low precision  
 
-### 💡 Key Insight
+### Key Insight
 The model exhibited **model collapse**, a condition where it predicts a single class due to imbalance and data limitations.
 
 ---
@@ -97,7 +97,7 @@ The model exhibited **model collapse**, a condition where it predicts a single c
 
 ---
 
-## 🧠 Key Findings
+## Key Findings
 
 - Accuracy is misleading for imbalanced datasets  
 - F1-score is more appropriate for defect detection  
@@ -108,7 +108,7 @@ The model exhibited **model collapse**, a condition where it predicts a single c
 
 ---
 
-## 🏭 Industrial Relevance
+## Industrial Relevance
 
 In semiconductor manufacturing, detecting defects is critical. Missing a defect can lead to significant financial loss.
 
@@ -118,7 +118,7 @@ In semiconductor manufacturing, detecting defects is critical. Missing a defect 
 
 ---
 
-## 🚀 Final Conclusion
+## Final Conclusion
 
 XGBoost outperforms LSTM in this study, providing a more stable and reliable solution for defect prediction.
 
@@ -143,11 +143,11 @@ For small, high-dimensional industrial datasets, tree-based models are often mor
 ---
 
 ## 📁 Project Structure
-├── data/
-├── notebook/
-│ └── defect_detection.ipynb
-├── models/
-├── README.md
+- data/
+- notebook/
+  - defect_detection.ipynb
+- models/
+- README.md
 
 ---
 
