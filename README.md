@@ -88,7 +88,7 @@ The model exhibited **model collapse**, a condition where it predicts a single c
 
 ---
 
-## ⚖️ Model Comparison
+## Model Comparison
 
 | Model     | Accuracy | F1-score | Behavior |
 |----------|---------|---------|----------|
@@ -126,14 +126,14 @@ While LSTM has the theoretical advantage of modeling temporal dependencies, it r
 
 ---
 
-## 💡 Key Takeaway
+## Key Takeaway
 
 Model selection should be based on data characteristics, not model complexity.  
 For small, high-dimensional industrial datasets, tree-based models are often more effective than deep learning approaches.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 - Python  
 - Pandas, NumPy  
 - Scikit-learn  
@@ -142,7 +142,7 @@ For small, high-dimensional industrial datasets, tree-based models are often mor
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 - data/
 - notebook/
   - defect_detection.ipynb
@@ -151,7 +151,7 @@ For small, high-dimensional industrial datasets, tree-based models are often mor
 
 ---
 
-## 📌 Future Work
+## Future Work
 - Advanced feature selection techniques  
 - Dimensionality reduction (PCA)  
 - Hyperparameter tuning  
@@ -160,5 +160,5 @@ For small, high-dimensional industrial datasets, tree-based models are often mor
 
 ---
 
-## ✨ Author
+## Author
 Sayid Mufaqih
