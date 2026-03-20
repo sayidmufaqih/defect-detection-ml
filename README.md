@@ -144,9 +144,8 @@ For small, high-dimensional industrial datasets, tree-based models are often mor
 
 ## Project Structure
 - data/
-- notebook/
-  - defect_detection.ipynb
-- models/
+  - uci-secom
+- defect_detection.ipynb
 - README.md
 
 ---
